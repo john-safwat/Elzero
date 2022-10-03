@@ -1,0 +1,14 @@
+/* start global values  */
+/* create the variables of the color and other values */
+:root {
+    --blue: rgb(83, 147, 248);
+    --white: rgb(255, 255, 255);
+    --gray: rgb(236, 236, 236);
+    --dark-gray: rgb(213, 213, 213);
+    --red: rgb(229, 71, 47);
+    --green: rgb(56, 149, 136);
+    --text-color-one: rgb(25, 25, 25);
+    --text-color-two: rgb(114, 117, 114);
+}
+
+/* end global values  */
