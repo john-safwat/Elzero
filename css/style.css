@@ -12,8 +12,14 @@
     --shadow-color :rgb(250, 250, 250);
 }
 * { transition: 0.4s ;}
-
 body {font-family: 'Cairo', sans-serif;}
+section {padding : 80px 0px }
+.sph {
+    display:block;
+    margin: 20px auto;
+    padding: 00px 50px ;
+    position: relative;
+}
 /* end global values  */
 
 /* start header section  */
