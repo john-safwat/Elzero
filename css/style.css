@@ -24,7 +24,10 @@ header {
 nav {
     background-color: var(--white);
     width: 100%;
-    box-shadow: 0px 5px 10px 0px #DDD;
+    box-shadow:
+    0px 5.9px 33px rgba(0, 0, 0, 0.028),
+    0px 8.4px 54.1px rgba(0, 0, 0, 0.039);
+
 }
 .container {
     position: relative;
@@ -81,56 +84,4 @@ nav {
     .container ul li::after {height: 3px;}
     .container ul li a{font-size: 14px; }
 }
-header nav .container .pop {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 480px ;
-    background-color: var(--white);
-    display: flex;
-    justify-content: space-evenly;
-    padding: 20px;
-    border-bottom: 5px solid var(--blue);
-}
-header nav .container .pop .img { padding: 70px 0px ; }
-@media (max-width:1200px) { header nav .container .pop .img { display: none; } }
-header nav .container .pop .text { 
-    display: flex;
-    justify-content: space-evenly   ;
-}
-header nav .container .pop .text ul{ 
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0px 10px;
-}
-header nav .container .pop .text ul li{ 
-    padding: 0px 40px 0px;
-    display: flex;
-    height: 75px;
-    align-items: center;
-    padding: 0px 20px;
-    margin: 0px 20px;
-    color: var(--blue);
-    font-weight: 700;
-    font-size: 18px;
-    border-bottom: 1px solid var(--dark-gray);
-}
-header nav .container .pop .text ul li:last-child{
-    border: none;
-} 
-header nav .container .pop .text ul li i{ margin: 0px 10px ; }
-header nav .container .pop .text ul li a{color: var(--blue); font-size: 18px;}
-@media (max-width:767PX) {
-    header nav .container .pop  {height: 800px;} 
-    header nav .container .pop .text { 
-        flex-direction: column;
-    }
-    header nav .container .pop .text ul li:last-child{
-        dwborder-bottom: 1px solid var(--dark-gray);
-        
-    } 
-}
-
 /* end header section  */
