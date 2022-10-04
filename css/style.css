@@ -17,11 +17,62 @@ section {padding : 80px 0px }
 .sph {
     display:block;
     margin: 20px auto;
-    padding: 00px 50px ;
+    padding: 10px 20px ;
+    font-size: 30px;
+    text-transform: uppercase;
+    background-color: transparent;
+    font-weight: 700;
     position: relative;
+    border: 3px solid ;
+}
+.sph::after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: var(--blue);
+    border-radius: 50%;
+    top: 50%;
+    right: -30%;
+    transform: translateY(-50%);
+    transition: 0.4s ease-in;
+}
+.sph::before {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: var(--blue);
+    border-radius: 50%;
+    top: 50%;
+    left: -30%;
+    transform: translateY(-50%);
+    transition: 0.4s ease-in;
+}
+.sph:hover::after {   
+    width: 50%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    border-radius: 0px;
+    transform: translateY(0%);
+}
+.sph:hover::before {
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0px;
+    transform: translateY(0%);
+}
+.sph:hover {
+    transition-delay: 0.4s;
+    color: var(--white);
+    border-color: var(--white);
 }
 /* end global values  */
-
 /* start header section  */
 /* set the dimensions of the section */
 header {
