@@ -51,7 +51,7 @@ section {padding : 80px 0px 100px}
     transition: 0.4s ease-in;
 }
 .sph:hover::after {   
-    width: 50%;
+    width: 55%;
     height: 100%;
     top: 0;
     right: 0;
@@ -60,7 +60,7 @@ section {padding : 80px 0px 100px}
     transform: translateY(0%);
 }
 .sph:hover::before {
-    width: 50%;
+    width: 55%;
     height: 100%;
     top: 0;
     left: 0;
@@ -331,6 +331,7 @@ header > i {
     margin-top: 30px;
     padding:20px; 
     background-color: var(--white);
+    box-shadow: 0px 0px 10px 0px #d6d6d6;
 }
 .gallery .content .img {
     overflow: hidden;
@@ -348,17 +349,125 @@ header > i {
     left: 0;
     background-color: var(--gray);
     transform-origin: center center;
-    opacity: 0.3;
+    opacity: 0.25;
     transform: scale(0);
 }
 .gallery .content .img:hover img {
-    transform: scale(1.4) rotate(15deg);
+    transition: transform 0.5s 0.1s;
+    transform: scale(1.15) rotate(5deg);
 }
 .gallery .content .img:hover:after {
-    animation: pop 0.3s ease-in-out 0s 1 ;
+    animation: pop 0.4s ease-in-out 0s 1 ;
 }
 @keyframes pop {
     0% {transform: scale(0); }
-    100% {transform: scale(1);}
+    100% {transform: scale(1.5);}
 }
 /* end the gallery section  */
+/* start the features section  */
+.features .content {
+    background-color: --white;
+    margin: 20px 10px;
+    border: 1px solid var(--dark-gray);
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px #d6d6d6;
+}
+.features .content .img {
+    overflow: hidden;
+    position: relative;
+}
+.features .content .img::before {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 0px 0px 150px 500px ;
+    border-color: transparent transparent var(--white) transparent;
+    z-index: 10;
+    bottom: 0;
+    right: 0;
+    transition: 0.4s;
+} 
+.features .content:hover .img::before {
+    border-width: 0px 500px 150px 0px ;
+}
+.features .content .img::after {
+    position:absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.4;
+}
+.features .one .img::after ,
+.features .one .text h1::after ,
+.features .one .text a::after {
+    background-color: var(--red); 
+}
+.features .two .img::after ,
+.features .two .text h1::after ,
+.features .two .text a::after{
+    background-color: var(--green);
+}
+.features .three .img::after ,
+.features .three .text h1::after ,
+.features .three .text a::after{
+    background-color: var(--blue); 
+}
+.features .content .img img{width: 100%;}
+.features .content .text{
+    padding: 20px;
+    padding-top: 0;
+    text-align: center;
+}
+.features .content .text h1 {
+    position: relative;
+    font-weight: 700;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 45px;
+}
+.features .content .text h1::after {
+    position: absolute;
+    content: "";
+    width: 80PX;
+    height: 7px;
+    bottom: -20px;
+    right: 50%;
+    transform: translateX(50%);
+}
+.features .content .text p {
+    font-size: 18px;
+    margin-top: 30px;
+    color: var(--text-color-two);
+}
+.features .content .text a {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 5px 25px;
+    border: 3px solid ;
+    border-radius: 10px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.features .content .text a::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top:0;
+    right: 100%;
+    transition: 0.4s;
+    z-index: -1;
+}
+.features .content:hover .text a::after{right: 0;}
+.features .content:hover .text a {color: var(--white);}
+.features .one .text a {  color: var(--red);   border-color:var(--red);}
+.features .two .text a {  color: var(--green); border-color: var(--green);}
+.features .three .text a {color: var(--blue);  border-color: var(--blue);}
+
+/* end the features section  */
