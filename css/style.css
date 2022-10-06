@@ -11,7 +11,7 @@
     --text-color-two: rgb(114, 117, 114);
     --shadow-color :rgb(250, 250, 250);
 }
-* { transition: 0.4s ;}
+
 body {font-family: 'Cairo', sans-serif;}
 section {padding : 80px 0px 100px}
 .sph {
@@ -25,6 +25,7 @@ section {padding : 80px 0px 100px}
     position: relative;
     border: 3px solid ;
     z-index: 20;
+    transition: 0.3s;
 }
 .sph::after {
     position: absolute;
@@ -110,6 +111,7 @@ header nav .container .main-nav {
     padding: 0;
     list-style: none;
 }
+header nav .container .main-nav .link { transition: 0.4s; }
 header nav .container .main-nav .link .a {
     display: inline-block;
     position: relative;
@@ -118,6 +120,7 @@ header nav .container .main-nav .link .a {
     text-decoration: none;
     height: 100% ;
     color: var(--text-color-one);
+    transition: 0.4s;
 }
 header nav .container .main-nav .link .a::after {
     position: absolute;
@@ -154,6 +157,7 @@ header .mega-menu {
     z-index: -1;
     display: flex;    
     border-bottom: 5px solid var(--blue);
+    transition: 0.4s;
 }
 header .mega-menu .img { margin-right: 60px;}
 header .mega-menu .links {
@@ -172,6 +176,7 @@ header .mega-menu .links li a {
     color: var(--blue);
     text-decoration: none;
     position: relative;
+    transition: 0.4s;
 }
 header .mega-menu .links li a:hover{
     background-color: var(--gray);
@@ -278,6 +283,7 @@ header > i {
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 3px #EEE;
+    transition: 0.4s;
 }
 .container .row .info-card .img img{ width: 100%; }
 .container .row .info-card .text {
@@ -337,8 +343,12 @@ header > i {
     overflow: hidden;
     width: 100%;
     position: relative;
+    
 }
-.gallery .content .img img{ width: 100%; }
+.gallery .content .img img{ 
+    width: 100%; 
+    transition: 0.4s;
+}
 .gallery .content .img::after
 {
     position: absolute;
@@ -398,7 +408,7 @@ header > i {
     height: 100%;
     top: 0;
     left: 0;
-    opacity: 0.4;
+    opacity: 0.6;
 }
 .features .one .img::after ,
 .features .one .text h1::after ,
