@@ -5,6 +5,7 @@
     --white: rgb(255, 255, 255);
     --gray: rgb(236, 236, 236);
     --dark-gray: rgb(213, 213, 213);
+    --overlay-gray :rgb(228, 228, 228);
     --red: rgb(229, 71, 47);
     --green: rgb(56, 149, 136);
     --gold : rgb(255, 193, 7);
@@ -36,7 +37,7 @@ section {padding : 80px 0px 100px}
     background-color: var(--blue);
     border-radius: 50%;
     top: 50%;
-    right: -30%;
+    right: -15%;
     transform: translateY(-50%);
     transition: 0.4s ease-in;
 }
@@ -48,7 +49,7 @@ section {padding : 80px 0px 100px}
     background-color: var(--blue);
     border-radius: 50%;
     top: 50%;
-    left: -30%;
+    left: -15%;
     transform: translateY(-50%);
     transition: 0.4s ease-in;
 }
@@ -395,7 +396,7 @@ header > i {
     border-width: 0px 0px 150px 500px ;
     border-color: transparent transparent var(--white) transparent;
     z-index: 10;
-    bottom: 0;
+    bottom: -2px;
     right: 0;
     transition: 0.4s;
 } 
@@ -407,7 +408,7 @@ header > i {
     content: "";
     width: 100%;
     height: 100%;
-    top: 0;
+    top: -2px;
     left: 0;
     opacity: 0.6;
 }
@@ -487,6 +488,7 @@ header > i {
 .testimonials .row {margin-top: 70px;}
 .testimonials .content {
     padding: 20px;
+    margin: 10px;
     background-color: var(--white);
     position: relative;
     border-radius: 10px;
@@ -520,6 +522,75 @@ header > i {
     margin-top: 10PX ;
     color: var(--text-color-two);
 } 
-.testimonials .content:hover .img{ transform: scale(1.2);}
 .testimonials .content .text .y { color: var(--gold);} 
 /* end the testimonials section  */
+/* start the team-members section  */
+.team-members .row{ margin-top: 40px;}
+.team-members .content {
+    padding-top:70px;
+    padding-left: 0px;
+    padding-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 30px 10px;
+}
+.team-members .content::after {
+    position : absolute;
+    content: "";
+    width: 80%;
+    height: 100%;
+    background-color: var(--gray);
+    top: 0;
+    right: 0;
+    z-index: -2;
+    border-radius: 20px;
+}
+.team-members .content::before{
+    position : absolute;
+    content: "";
+    width: 80%;
+    height: 100%;
+    background-color: var(--overlay-gray);
+    top: 0;
+    right: -100%;
+    z-index: -1;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.team-members .content:hover::before{right: 0;}
+.team-members .content .info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.team-members .content .info .img {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 20px;
+    margin: 10px;
+    transition: 0.6s;
+}
+.team-members .content:hover .info .img {filter: grayscale(1);}
+.team-members .content .info .img img {width: 100%;}
+.team-members .content .info .icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.team-members .content .info .icon i{
+    font-size: 20px;
+    padding: 20px ;
+    padding-left: 10px;
+    color: var(--dark-gray);
+    transition: 0.4s;
+}
+.team-members .content .info .icon i:hover {color: var(--blue);}
+.team-members .content .text {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+.team-members .content .text h3 {color: var(--blue); transition: 0.4s;}
+.team-members .content:hover .text h3 {color: var(--text-color-two);}
+/* end the team-members section  */
