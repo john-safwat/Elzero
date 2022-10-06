@@ -7,6 +7,7 @@
     --dark-gray: rgb(213, 213, 213);
     --red: rgb(229, 71, 47);
     --green: rgb(56, 149, 136);
+    --gold : rgb(255, 193, 7);
     --text-color-one: rgb(25, 25, 25);
     --text-color-two: rgb(114, 117, 114);
     --shadow-color :rgb(250, 250, 250);
@@ -481,3 +482,44 @@ header > i {
 .features .three .text a {color: var(--blue);  border-color: var(--blue);}
 
 /* end the features section  */
+/* start the testimonials section  */
+.testimonials {background-color: var(--gray);}
+.testimonials .row {margin-top: 70px;}
+.testimonials .content {
+    padding: 20px;
+    background-color: var(--white);
+    position: relative;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0px 0px 10px 0px #dadada;
+}
+.testimonials .content .img {
+    width: 100px;
+    height: 100px ;
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 10px solid var(--gray);
+    top: 0;
+    right: -10px;
+    transform: translateY(-50%);
+    transition: 0.4s;
+}
+.testimonials .content .img img{ width: 100%; }
+.testimonials .content .text .title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;    
+}
+.testimonials .content .text .jop {
+    color: var(--text-color-two);
+    margin-bottom: 10px;
+}
+
+.testimonials .content .text .desc {
+    margin-top: 10PX ;
+    color: var(--text-color-two);
+} 
+.testimonials .content:hover .img{ transform: scale(1.2);}
+.testimonials .content .text .y { color: var(--gold);} 
+/* end the testimonials section  */
