@@ -594,3 +594,88 @@ header > i {
 .team-members .content .text h3 {color: var(--blue); transition: 0.4s;}
 .team-members .content:hover .text h3 {color: var(--text-color-two);}
 /* end the team-members section  */
+/* start the services section  */
+.services {background-color: var(--gray);}
+.services .row {margin-top: 60px;}
+.services .content {
+    margin-top: 40px;
+    overflow: hidden;
+    background-color: var(--white);
+    position: relative;
+    transition: 0.4s;
+    box-shadow: 0px 0px 10px 0px #dadada;
+}
+.services .content:hover { transform: translateY(-15px); } 
+.services .content::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: var(--blue);
+    top: 0px;
+    left: 0;
+    transform-origin: center center;
+    transform: scaleX(0);
+    transition: 0.4s;
+}
+.services .content:hover::after { transform: scaleX(1); } 
+.services .content .body {
+    padding: 60px 0px 40px ;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+}
+.services .content .body i {
+    font-size: 80px ;
+    color: var(--dark-gray);
+}
+.services .content .body h2 {
+    color: var(--blue);
+    font-size: 32px;
+    font-weight: 700;
+    margin-top:20px;
+}
+.services .content .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    background-color: var(--gray);
+    overflow: hidden;
+}
+.services .content .footer .num {
+    position: relative;
+    font-size: 30px ;
+    font-weight: 700;
+    padding: 10px 30px;
+    color: var(--white);
+    z-index: 10;
+}
+.services .content .footer .num::after{
+    position: absolute;
+    content: "";
+    width: 150%;
+    height: 100%;
+    background-color: var(--blue);
+    right: 0%;
+    top: 0;
+    z-index: -1;
+    transform: skewX(-20deg);
+}
+.services .content .footer .num::before{
+    position: absolute;
+    content: "";
+    width: 150%;
+    height: 100%;
+    background-color: var(--dark-gray);
+    right: -50%;
+    top: 0;
+    z-index: -1;
+    transform: skewX(-20deg);
+}
+.services .content .footer a {
+    padding: 20px 30px ;
+    text-decoration: none;
+    font-size: 18px ;
+    color: var(--blue);
+}
+/* end the services section  */
