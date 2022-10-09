@@ -20,7 +20,7 @@ section {padding : 80px 0px 100px}
     display:block;
     margin: 20px auto;
     padding: 10px 20px ;
-    font-size: 30px;
+    font-size: 24px;
     text-transform: uppercase;
     background-color: transparent;
     font-weight: 700;
@@ -277,8 +277,9 @@ header > i {
 }
 /* end header section  */
 /* start article section  */
-.container .row {margin-top: 50px;}
-.container .row .info-card {
+.article {position: relative;}
+.article .container .row {margin-top: 50px;}
+.article .container .row .info-card {
     margin: 0px 10px;
     margin-top: 40px;
     background-color: var(--white);
@@ -287,35 +288,35 @@ header > i {
     box-shadow: 0px 0px 10px 3px #EEE;
     transition: 0.4s;
 }
-.container .row .info-card .img img{ width: 100%; }
-.container .row .info-card .text {
+.article .container .row .info-card .img img{ width: 100%; }
+.article .container .row .info-card .text {
     padding: 20px;
     padding-top: 25px;
     border-bottom: 1px solid var(--gray);
 }
-.container .row .info-card .text h5 {
+.article .container .row .info-card .text h5 {
     font-size: 24px ;
     font-weight: 500;
     color: var(--text-color-one);
 }
-.container .row .info-card .text p {
+.article .container .row .info-card .text p {
     margin-bottom: 0;
     font-size: 16px;
     color: var(--text-color-two);
 }
-.container .row .info-card .footer { 
+.article .container .row .info-card .footer { 
     padding: 20px; 
     display: flex;
     align-items: center;
 }
-.container .row .info-card .footer a {
+.article .container .row .info-card .footer a {
     display: inline-block;
     text-decoration: none;
     font-size: 20px;
     font-weight: 600;
     color: var(--blue);
 }
-.container .row .info-card .footer i {
+.article .container .row .info-card .footer i {
     color: var(--blue);
     margin-left: auto;
     font-size: 20px;
@@ -325,16 +326,16 @@ header > i {
     50% {transform: translateX(-6px);}
     100% {transform: translateX(0px);}
 }
-.container .row .info-card:hover {
+.article .container .row .info-card:hover {
     transform: translateY(-15px);
     box-shadow: 0px 0px 10px 3px #DDD;
 }
-.container .row .info-card:hover i {
+.article .container .row .info-card:hover i {
     animation: arrow 0.4s ease-in 0s infinite;
 }
 /* end article section  */
 /* start the gallery section  */
-.gallery { background-color: var(--gray); }
+.gallery { background-color: var(--gray); position: relative;}
 .gallery .content {
     margin-top: 30px;
     padding:20px; 
@@ -377,6 +378,7 @@ header > i {
 }
 /* end the gallery section  */
 /* start the features section  */
+.features {position: relative;}
 .features .content {
     background-color: --white;
     margin: 20px 10px;
@@ -484,7 +486,7 @@ header > i {
 
 /* end the features section  */
 /* start the testimonials section  */
-.testimonials {background-color: var(--gray);}
+.testimonials {background-color: var(--gray); position: relative;}
 .testimonials .row {margin-top: 70px;}
 .testimonials .content {
     padding: 20px;
@@ -525,6 +527,7 @@ header > i {
 .testimonials .content .text .y { color: var(--gold);} 
 /* end the testimonials section  */
 /* start the team-members section  */
+.team-members {position: relative;}
 .team-members .row{ margin-top: 40px;}
 .team-members .content {
     padding-top:70px;
@@ -679,3 +682,56 @@ header > i {
     color: var(--blue);
 }
 /* end the services section  */
+/* Start the our skills section  */
+.our-skills { position: relative; }
+.our-skills .content {
+    margin-top: 80px;
+    display: flex;
+    justify-content:space-between;    
+    align-items: center;
+}
+.our-skills .content .text { width: 60%; }
+.our-skills .content .text .info .data{
+    display: flex;
+    justify-content: space-between;
+}
+.our-skills .content .text .info .data .title {
+    font-size: 20px;
+    font-weight: 700;
+}
+.our-skills .content .text .info .data .perc {
+    color: var(--blue);
+    border: 1px solid var(--gray);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.our-skills .content .text .info .parent {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-color: var(--gray);
+    position: relative;
+}
+.our-skills .content .text .info .child {
+    display: block;
+    position: absolute;
+    height: 100%;
+    background-color: var(--blue);
+    top: 0;
+    left: 0;
+}
+@media (max-width:1200px) {
+    .our-skills .content .text { width: 100%; }
+    .our-skills .content .img { display: none;}
+    
+}
+/* end the our skills section  */
+/* start the how it works section  */
+.how-it-works {
+    position: relative;
+    background-color: var(--gray);
+
+}
+/* end the how it works section  */
