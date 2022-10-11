@@ -76,6 +76,20 @@ section {padding : 80px 0px 100px}
     color: var(--white);
     border-color: transparent;
 }
+.right
+{
+    position: absolute;
+    top: 200px;
+    right: 0;
+    z-index: 1;
+}
+.left
+{
+    position: absolute;
+    bottom: 200px;
+    left: 0;
+    z-index: 1;
+}
 /* end global values  */
 /* start header section  */
 /* set the dimensions of the section */
@@ -895,3 +909,95 @@ header > i {
     .events .container form input:last-child {width: 100%;}
 }
 /* end the events section  */
+/* start the pricing plans section  */
+.pricing-plans {
+    position: relative;
+    background-color: var(--gray);
+}
+.pricing-plans .content {
+    margin-top: 30px;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 5px 10px 0px #dadada;
+    position: relative;
+}
+.pricing-plans .row { margin-top: 80px; position: relative; z-index: 20;}
+.pricing-plans .top{
+    transform:translateY(-25px); 
+    position: relative;
+}
+.pricing-plans .top::after {
+    position: absolute;
+    content: "Most Popular";
+    top:0;
+    right: 20px;
+    background-color: var(--blue);
+    padding:10px 40px 10px 20px;
+    font-size: 20px;
+    color: var(--white);
+    font-weight: 400;
+    transform: rotate(90deg) translateX(36%) translateY(-120%);
+}
+.pricing-plans .top::before {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 25px;
+    border-color: transparent  transparent  var(--white) transparent;
+    top: 130px;
+    right: 25px;
+    z-index: 20;
+}
+.pricing-plans .content .title {
+    padding: 30px ;
+    padding-top: 40px; 
+    font-size: 24px;
+    color: var(--text-color-one);
+    font-weight: 700;
+}
+.pricing-plans .content .img { width:100px}
+.pricing-plans .content .img img{ width: 100px; }
+.pricing-plans .content .price {
+    color: var(--blue);
+    font-size: 70px;
+    font-weight: 700;
+    margin: 10px 0px 5px ;
+}
+.pricing-plans .content ul {
+    list-style: none;
+    padding:0px;
+    margin-top: 20px;
+    width: 100%;
+}
+.pricing-plans .content ul li {
+    padding: 20px 00px;
+    font-size: 18px;
+    font-weight: 500;
+    border-top: 1px solid var(--dark-gray);
+}
+.pricing-plans .content ul li i {
+    padding: 0px 15px 0px 20px ;
+    font-size: 20px; 
+    color: var(--blue);
+}
+.pricing-plans .content a {
+    margin-bottom: 40px; 
+    text-decoration: 0;
+    font-size: 20px;
+    padding:10px 20px;
+    border: 3px solid var(--blue);
+    border-radius: 10px;
+    font-weight: 500;
+    color: var(--blue);
+    transition: 0.4s;
+}
+.pricing-plans .content a:hover {
+    background-color: var(--blue);
+    color: var(--white);
+}
+@media (max-width:991px) {
+    .pricing-plans .top{ transform:translateY(0px); }
+}
+/* end the pricing plans section  */
