@@ -805,7 +805,7 @@ header > i {
 /* end the how it works section  */
 /* start the events section  */
 .events {position: relative; }
-.events .container { padding: 30px;}
+.events .container { padding: 30px; position: relative; z-index: 30;}
 .events .content {
     display: flex;
     justify-content: center;
@@ -829,6 +829,7 @@ header > i {
     margin: 5px;
     border: 1px solid var(--dark-gray);
     transition: 0.4s;
+    background-color: var(--white);
 }
 .events .content .info .timer .time:hover{ border-color: var(--blue); }
 .events .content .info .timer .time .title{
@@ -1001,3 +1002,68 @@ header > i {
     .pricing-plans .top{ transform:translateY(0px); }
 }
 /* end the pricing plans section  */
+/* start the top videos section  */
+.top-videos { position: relative; }
+.top-videos .content { 
+    margin-top: 80px; 
+    display: flex;
+}
+.top-videos .content .panel ul { 
+    list-style: none; 
+    padding:0px;
+    margin: 0;
+} 
+.top-videos .content .panel ul li{
+    padding: 20px 20px; 
+    border: 1px solid var(--dark-gray);
+    border-right: none;
+    transition: 0.4s;
+}
+.top-videos .content .panel ul li:hover{ background-color: var(--gray);}
+.top-videos .content .panel ul li:first-child {
+    background-color: var(--gray);
+    font-size: 18px ;
+    color: var(--text-color-one);
+    font-weight: 700;
+}
+.top-videos .content .panel ul li a {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.4s;
+    color: var(--text-color-one); 
+
+}
+.top-videos .content .panel ul li a:hover {
+    color: var(--blue);
+}
+.top-videos .content .panel ul li p {
+    font-size: 16px;
+        color: var(--text-color-two);
+    margin-bottom: 0;
+}
+.top-videos .content .video {
+    background-color: var(--dark-gray);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.top-videos .content .video .text {
+    background-color: var(--white);
+    padding: 20px;
+    font-size: 20px;
+}
+@media (max-width:991px) {
+    .top-videos .content {flex-direction: column;}
+    .top-videos .content .panel ul li{ border: 1px solid var(--dark-gray); }
+}
+/* end the top videos section  */
+/* start the status section  */
+.status {
+    position: relative;
+    background-color: var(--gray);
+}
+/* end the status section  */
